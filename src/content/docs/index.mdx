@@ -9,21 +9,33 @@ hero:
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <div style="margin: 0 -1.5rem;">
-  <img src="/param8/images/param8_3.webp" alt="param8 controller" style="width: 100%; display: block;" />
+  <img src="/param8/images/param8_3.2.webp" alt="param8 controller" style="width: 100%; display: block;" />
 </div>
 
 ## Features
 
-<CardGrid>
-  <Card title="8 Push-Encoders" icon="setting">
-  </Card>
-  <Card title="Double OLED Display" icon="laptop">
-  </Card>
-  <Card title="6 User Presets + 2 Built-in" icon="list-format">
-  </Card>
-  <Card title="Latch & Revert functions" icon="random">
-  </Card>
-</CardGrid>
+<div class="features-frame">
+  <CardGrid>
+    <Card title="8 Push-Encoders" icon="setting">
+    Infinite rotary encoders with push-button — no pickup issues, always in sync.
+    </Card>
+    <Card title="Dual OLED Displays" icon="laptop">
+    Two 256×64 screens showing parameter names, values, and button states in real time.
+    </Card>
+    <Card title="Latch & Revert" icon="random">
+    **Latch** : silently tweak parameters, then apply all changes at once.<br/>**Revert** : experiment freely, then roll back to the original state.
+    </Card>
+    <Card title="Custom MIDI Mappings" icon="pencil">
+    Name your encoders and buttons, assign any CC/Note on any channel per preset.
+    </Card>
+    <Card title="6 User + 2 Built-in Presets" icon="list-format">
+    Dedicated Mixer and Device modes for Ableton Live, plus 6 freely configurable presets.
+    </Card>
+    <Card title="Online Editor" icon="external">
+    Configure presets, names, and layouts from your browser via WebMIDI — no install needed.
+    </Card>
+  </CardGrid>
+</div>
 
 <div style="max-width: 720px; margin: 2rem auto;">
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
