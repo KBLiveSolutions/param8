@@ -8,10 +8,14 @@ export default defineConfig({
 	base: '/param8',
 	integrations: [
 		starlight({
-			title: 'param8',
+			title: '',
 			logo: { src: './src/assets/logo.svg' },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/KBLiveSolutions/param8' }],
-			customCss: ['./src/styles/custom.css'],
+			components: {
+					Header: './src/components/Header.astro',
+					Sidebar: './src/components/Sidebar.astro',
+				},
+				customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
 					label: 'Getting Started',

@@ -3,45 +3,38 @@ title: param8
 description: 8-encoder USB MIDI controller for Ableton Live
 template: splash
 hero:
-  tagline: A compact USB MIDI controller with 8 push-encoders, 8 buttons, and dual OLED displays — designed for Ableton Live.
-  actions:
-    - text: Get Started
-      link: /docs/overview/
-      icon: right-arrow
-    - text: Documentation
-      link: /docs/quick-start/
-      icon: open-book
-      variant: minimal
-    - text: Online Editor
-      link: /editor/
-      icon: setting
-      variant: minimal
+  title: ' '
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<div style="margin: 0 -1.5rem;">
+  <img src="/param8/images/param8_3.png" alt="param8 controller" style="width: 100%; display: block;" />
+</div>
 
 ## Features
 
 <CardGrid>
   <Card title="8 Push-Encoders" icon="setting">
-    Infinite rotation with push-button. Relative or absolute MIDI CC, fully configurable per preset.
   </Card>
-  <Card title="Dual OLED Displays" icon="laptop">
-    Two 256×64 SSD1322 displays showing parameter names, values, and visual feedback in real time.
+  <Card title="Double OLED Display" icon="laptop">
   </Card>
   <Card title="6 User Presets + 2 Built-in" icon="list-format">
-    6 fully customizable presets for your mappings, plus dedicated Mixer and Device modes for Ableton Live.
   </Card>
-  <Card title="Latch & Revert" icon="random">
-    Queue encoder changes and release them at once, or revert to undo your last tweaks.
-  </Card>
-  <Card title="3 Display Layouts" icon="document">
-    Dynamic, Compact, or Stacked — switch display layouts via SysEx or the web editor.
-  </Card>
-  <Card title="Web Editor" icon="external">
-    Configure presets, MIDI mappings, button modes, and display settings from your browser via WebMIDI.
+  <Card title="Latch & Revert functions" icon="random">
   </Card>
 </CardGrid>
+
+<div style="max-width: 720px; margin: 2rem auto;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+      src="https://www.youtube.com/embed/4LWdT278taY"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+</div>
 
 ## Specs
 
@@ -49,24 +42,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 |---|---|
 | **Encoders** | 8× infinite rotary with push-button |
 | **Buttons** | 8× momentary or toggle |
-| **Displays** | 2× SSD1322 OLED 256×64 px |
+| **Displays** | 2× OLED 256×64 px |
 | **MCU** | Raspberry Pi Pico (RP2040) |
 | **Connection** | USB-C (class-compliant MIDI) |
 | **Compatibility** | Ableton Live (dedicated remote script), any DAW via MIDI |
-| **Firmware** | Open source, updatable via UF2 |
-
-## Open Source
-
-param8 is fully open source — firmware, remote script, and editor.
-
-<CardGrid>
-  <Card title="Firmware" icon="github">
-    [param8-midi-controller](https://github.com/KBLiveSolutions/param8-midi-controller) — PlatformIO / RP2040
-  </Card>
-  <Card title="Remote Script" icon="github">
-    [param8_remote_script](https://github.com/KBLiveSolutions/param8_remote_script) — Ableton Live integration
-  </Card>
-  <Card title="Web Editor" icon="github">
-    [param8-editor](https://github.com/KBLiveSolutions/param8-editor) — WebMIDI configuration tool
-  </Card>
-</CardGrid>

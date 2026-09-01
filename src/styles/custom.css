@@ -18,10 +18,30 @@
 	--sl-color-accent-high: #003366;
 }
 
+/* Remove Starlight header padding/border (custom Header handles its own) */
+.header {
+	padding: 0 !important;
+	border-bottom: none !important;
+}
+
+/* Hide hero section on home page (used only to suppress default title) */
+[data-has-hero] .hero {
+	display: none;
+}
+
 /* Landing page hero */
 .hero-section {
 	text-align: center;
 	padding: 4rem 2rem;
+}
+.hero-section {
+  text-align: center;
+  justify-content: center;
+}
+
+.hero-section > img,
+.hero-section .hero-html {
+  margin-inline: auto;
 }
 
 .hero-section h1 {
@@ -37,6 +57,8 @@
 	max-width: 600px;
 	margin: 0 auto 2rem;
 }
+
+
 
 /* Feature grid */
 .features {

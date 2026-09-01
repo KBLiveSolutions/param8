@@ -1,0 +1,132 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const links = [
+  { text: 'Get Started', href: `${base}/docs/overview/` },
+  { text: 'Documentation', href: `${base}/docs/quick-start/` },
+  { text: 'Online Editor', href: `${base}/editor/` },
+  { text: 'Order', href: 'https://gumroad.com/' },
+];
+---
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href={`${base}/`} class="topbar-logo">
+      <img src={`${base}/logo.svg`} alt="param8" height="28" />
+    </a>
+    <span class="topbar-tagline">Compact USB MIDI controller designed for Ableton Live.</span>
+    <nav class="topbar-nav" aria-label="Main">
+      {links.map((l) => (
+        <a href={l.href} class="topbar-link">{l.text}</a>
+      ))}
+    </nav>
+    <button class="topbar-menu-btn" aria-label="Menu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <rect y="3" width="20" height="2" rx="1" />
+        <rect y="9" width="20" height="2" rx="1" />
+        <rect y="15" width="20" height="2" rx="1" />
+      </svg>
+    </button>
+  </div>
+  <nav class="topbar-mobile-nav" aria-label="Mobile">
+    {links.map((l) => (
+      <a href={l.href} class="topbar-mobile-link">{l.text}</a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  const btn = document.querySelector('.topbar-menu-btn');
+  const nav = document.querySelector('.topbar-mobile-nav');
+  btn?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+</script>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--sl-color-bg-nav);
+    border-bottom: none;
+    padding: 0 1rem;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+  .topbar-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .topbar-logo img {
+    height: 28px;
+  }
+  .topbar-tagline {
+    color: var(--sl-color-gray-3);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .topbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .topbar-link {
+    color: var(--sl-color-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .topbar-link:hover {
+    color: var(--sl-color-text-accent);
+  }
+  .topbar-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--sl-color-text);
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0.25rem;
+  }
+  .topbar-mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem 0 1rem;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  .topbar-mobile-nav.open {
+    display: flex;
+  }
+  .topbar-mobile-link {
+    color: var(--sl-color-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .topbar-mobile-link:hover {
+    color: var(--sl-color-text-accent);
+  }
+  @media (max-width: 640px) {
+    .topbar-nav { display: none; }
+    .topbar-tagline { display: none; }
+    .topbar-menu-btn { display: block; }
+  }
+</style>
