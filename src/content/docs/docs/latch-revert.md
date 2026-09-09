@@ -13,11 +13,6 @@ Latch lets you prepare encoder changes without sending them, then release everyt
 
 This is useful for preparing multiple parameter changes and committing them at the same moment.
 
-### Absolute vs Relative
-
-- **Relative encoders:** Each individual delta is stored and replayed in order
-- **Absolute encoders:** Only the final value is sent on release
-
 ## Revert Mode
 
 Revert lets you undo your recent encoder movements.

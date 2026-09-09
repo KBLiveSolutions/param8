@@ -5,28 +5,21 @@ description: Automatic device parameter control (Preset 8)
 
 Preset 8 (**Device**) maps the 8 encoders to parameters of the currently selected device in Ableton Live. The remote script handles bank switching and parameter naming automatically.
 
+The left header shows the device name, the right header shows the bank name.
+
 ## Encoders
 
 The 8 encoders map to the current bank of 8 parameters from the selected device. Parameter names and values are displayed on the OLEDs in real time.
 
 ## Buttons
 
-| # | Control |
-|---|---------|
-| 1 | Previous Track |
-| 2 | Next Track |
-| 3 | Hot-Swap mode |
-| 4 | A/B toggle |
-| 5 | Previous Device |
-| 6 | Next Device |
-| 7 | Previous Bank |
-| 8 | Next Bank |
+| 1 | 2 | 3 | 4 |
+|:---:|:---:|:---:|:---:|
+| Prev Track | Next Track | Device On | A/B |
+| **5** | **6** | **7** | **8** |
+| Prev Device | Next Device | Prev Bank | Next Bank |
 
-## Display
-
-- **Left header:** Device name (shows the preset name if available, otherwise the class name)
-- **Right header:** Bank name
-- **Faders:** Parameter name and value for each of the 8 mapped parameters
+A/B toggles the compare A/B function in Ableton Live, available only for Live's native devices (excluding Racks).
 
 ## Bank Resolution
 

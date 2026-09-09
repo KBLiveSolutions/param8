@@ -20,17 +20,57 @@
 
 /* Single frame around feature cards */
 .features-frame {
-	border: 1px solid var(--sl-color-gray-5);
-	border-radius: 8px;
-	padding: 1.5rem;
+	padding: 0.75rem;
+}
+.features-frame .card-grid {
+	grid-template-columns: 1fr !important;
+	gap: 0.5rem;
 }
 .features-frame .sl-link-card {
 	border: none;
 	background: transparent;
 }
-.features-frame .icon {
-	color: var(--sl-color-accent);
+/* Override Starlight's colored icon borders/backgrounds with alternating grays */
+.features-frame .card:nth-child(odd) {
+	--sl-card-border: var(--sl-color-gray-3) !important;
+	--sl-card-bg: var(--sl-color-gray-5) !important;
 }
+.features-frame .card:nth-child(even) {
+	--sl-card-border: var(--sl-color-gray-4) !important;
+	--sl-card-bg: var(--sl-color-gray-6) !important;
+}
+.features-frame .card .icon {
+	color: var(--sl-color-gray-2) !important;
+}
+:root[data-theme='light'] .features-frame .card:nth-child(odd) {
+	--sl-card-border: var(--sl-color-gray-3) !important;
+	--sl-card-bg: var(--sl-color-gray-1) !important;
+}
+:root[data-theme='light'] .features-frame .card:nth-child(even) {
+	--sl-card-border: var(--sl-color-gray-4) !important;
+	--sl-card-bg: var(--sl-color-gray-2) !important;
+}
+:root[data-theme='light'] .features-frame .card .icon {
+	color: var(--sl-color-gray-4) !important;
+}
+
+/* Feature cards slide-in from left on scroll */
+@keyframes cardSlideIn {
+	from { opacity: 0; transform: translateX(-40px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+.features-frame .card {
+	opacity: 0;
+}
+.features-frame .card.visible {
+	animation: cardSlideIn 0.5s ease forwards;
+}
+.features-frame .card:nth-child(1) { animation-delay: 0s; }
+.features-frame .card:nth-child(2) { animation-delay: 0.1s; }
+.features-frame .card:nth-child(3) { animation-delay: 0.2s; }
+.features-frame .card:nth-child(4) { animation-delay: 0.3s; }
+.features-frame .card:nth-child(5) { animation-delay: 0.4s; }
+.features-frame .card:nth-child(6) { animation-delay: 0.5s; }
 
 /* Remove Starlight header padding/border (custom Header handles its own) */
 .header {

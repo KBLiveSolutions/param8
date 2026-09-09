@@ -5,34 +5,28 @@ description: Global mixer controls (Preset 7)
 
 Preset 7 (**Global**) provides direct access to Ableton Live's mixer and transport controls via the remote script.
 
+The header shows the selected track name on the left and "Global" on the right.
+
 ## Encoders
 
-| # | Control | Behavior |
-|---|---------|----------|
-| 1 | Master Volume | Absolute |
-| 2 | Cue Volume | Absolute |
-| 3 | Tempo | Value-only display (shows BPM) |
-| 4 | Scene Select | Value-only display (shows scene name) |
-| 5 | Track Volume | Relative to selected track |
-| 6 | Pan | Relative to selected track |
-| 7 | Position | Value-only display |
-| 8 | Selected Parameter | Device parameter under focus |
+| 1 | 2 | 3 | 4 |
+|:---:|:---:|:---:|:---:|
+| Master Volume | Cue Volume | Tempo | Scene Select |
+| **5** | **6** | **7** | **8** |
+| Track Volume | Pan | Position | Sel. Parameter |
 
-Encoders 3, 4, and 7 display only their value (no parameter name) since the value itself is descriptive.
+Tempo, Scene Select, and Position display only their value (no parameter name) since the value itself is descriptive (BPM, scene name, song position).
+
+Track Volume, and Pan apply to the currently selected track.
 
 ## Buttons
 
-| # | Control |
-|---|---------|
-| 1 | Metronome on/off |
-| 2 | Arrangement Record |
-| 3 | Play / Stop |
-| 4 | Launch Scene |
-| 5 | Mute (selected track) |
-| 6 | Solo (selected track) |
-| 7 | Arrangement Loop |
-| 8 | → Default (reset to defaults) |
+| 1 | 2 | 3 | 4 |
+|:---:|:---:|:---:|:---:|
+| Metronome | Arm | Play / Stop | Launch Scene |
+| **5** | **6** | **7** | **8** |
+| Mute | Solo | Arr. Loop | → Default |
 
-## Display
+Arm, Mute and Solo apply to the currently selected track.
 
-The header shows the selected track name on the left and "Global" on the right.
+→ Default returns the parameter to its default value.

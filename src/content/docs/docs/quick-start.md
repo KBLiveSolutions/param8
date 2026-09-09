@@ -9,7 +9,7 @@ Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI d
 
 ## 2. Install the Remote Script
 
-1. Download or clone the [remote script](https://github.com/KBLiveSolutions/param8_remote_script)
+1. Download the [remote script](https://github.com/KBLiveSolutions/param8_remote_script/archive/refs/heads/main.zip)
 2. Copy the `param8` folder to your Ableton Remote Scripts directory:
    - **macOS:** `~/Music/Ableton/User Library/Remote Scripts/`
    - **Windows:** `~\Documents\Ableton\User Library\Remote Scripts\`
@@ -30,7 +30,6 @@ The controller should light up and display parameter names once connected.
 - **Press Shift + Button 7** for Mixer (Global) mode
 - **Press Shift + Button 8** for Device mode
 - **Hold Latch** then turn encoders to queue changes — release to send them all at once
-- **Double-tap Latch** to request the name of the last-used control from Live
 
 ## 5. Web Editor
 

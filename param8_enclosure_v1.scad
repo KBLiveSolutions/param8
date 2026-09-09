@@ -12,10 +12,10 @@ pcb_thick     = 1.6;
 pcb_corner_r  = 3.0;
 
 // --- Enclosure ---
-wall_thick     = 2.0;
+wall_thick     = 3.0;
 wall_clearance = 0.8;      // gap PCB ↔ inner wall
 plate_thick    = 2.0;
-fillet_r       = 1.5;      // top edge fillet radius
+fillet_r       = 2;      // top edge fillet radius
 
 // Derived inner/outer dims
 inner_w  = pcb_w + wall_clearance * 2;

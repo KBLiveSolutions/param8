@@ -14,6 +14,7 @@ export default defineConfig({
 			components: {
 					Header: './src/components/Header.astro',
 					Sidebar: './src/components/Sidebar.astro',
+					Footer: './src/components/Footer.astro',
 				},
 				customCss: ['./src/styles/custom.css'],
 			sidebar: [
@@ -31,20 +32,7 @@ export default defineConfig({
 						{ label: 'Mixer Mode', slug: 'docs/mixer-mode' },
 						{ label: 'Device Mode', slug: 'docs/device-mode' },
 						{ label: 'Latch & Revert', slug: 'docs/latch-revert' },
-					],
-				},
-				{
-					label: 'Configuration',
-					items: [
 						{ label: 'Editor', slug: 'docs/editor' },
-						{ label: 'Display Layouts', slug: 'docs/layouts' },
-					],
-				},
-				{
-					label: 'Reference',
-					items: [
-						{ label: 'MIDI Map', slug: 'docs/midi-map' },
-						{ label: 'SysEx Protocol', slug: 'docs/sysex' },
 					],
 				},
 			],
