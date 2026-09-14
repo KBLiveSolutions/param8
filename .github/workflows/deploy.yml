@@ -26,15 +26,14 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      # Publish the standalone param8 Editor under /editor.
-      # The editor is a static app in the param8-editor repository,
-      # so it can be copied directly into the main Pages artifact.
-      - name: Add param8 Editor
+      # Publish the standalone param8 Editor as the embedded app.
+      # The /editor/ URL itself is the Astro page containing the iframe.
+      - name: Add param8 Editor app
         run: |
           git clone --depth 1 https://github.com/KBLiveSolutions/param8-editor.git ../param8-editor
-          rm -rf ./dist/editor
-          mkdir -p ./dist/editor
-          cp -R ../param8-editor/public/. ./dist/editor/
+          rm -rf ./dist/editor-app
+          mkdir -p ./dist/editor-app
+          cp -R ../param8-editor/public/. ./dist/editor-app/
 
       - uses: actions/upload-pages-artifact@v3
         with:
