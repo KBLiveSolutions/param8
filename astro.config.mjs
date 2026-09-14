@@ -4,8 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://kblivesolutions.github.io',
-	base: '/param8',
+	site: 'https://param8.me',
 	integrations: [
 		starlight({
 			title: '',
