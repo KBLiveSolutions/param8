@@ -45,6 +45,8 @@ Use the [web editor](/editor/) or assign names directly from Ableton using the d
 3. Double-tap the Latch button on param8
 4. The parameter's name is sent from the remote script and stored in the preset. The control will show the value as shown in Ableton Live
 
+To cancel the linking, double-tap the Latch button and hold the button on the second tap. The control name and value will revert to the standard MIDI message.
+
 #### Per set controls naming
 You can use Racks to have different control names for each Live set.
 1. Add a Rack on a Track (MIDI, Audio or Instrument Rack)
@@ -53,7 +55,7 @@ You can use Racks to have different control names for each Live set.
 
 Here is an example of Controls 1 to 5 being renamed for Preset 1
 
-![Rename with Rack](/param8/images/RackRenamer.webp "Rename with Rack")
+![Rename with Rack](/images/RackRenamer.webp "Rename with Rack")
 
 #### Dynamic naming
 If your mappings change during a performance and you want the name the control to follow the curent mapping, you can use Racks chains.
@@ -65,4 +67,4 @@ If your mappings change during a performance and you want the name the control t
 
 Here is an example of Controls 1 to 5 being renamed for Preset 1 with Chain 3 active
 
-![Rename with Rack](/param8/images/MultiRackRenamer.webp "Rename with Rack")
+![Rename with Rack](/images/MultiRackRenamer.webp "Rename with Rack")

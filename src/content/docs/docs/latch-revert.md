@@ -19,9 +19,5 @@ Revert lets you undo your recent encoder movements.
 
 1. **Hold Shift + press Latch** to enter Revert mode (LED blinks)
 2. **Turn encoders** — movements are recorded
-3. **Hold Shift + press Latch again** to revert — all recorded movements are played back in reverse
-4. **Press Latch alone** to exit Revert mode without reverting
-
-## Double-Tap Latch
-
-Double-tapping the Latch button (two presses within 300ms) sends a name request to the remote script for the last-used control. The name is then stored in the current preset.
+3. **Press Latch** to revert — all recorded movements are played back in reverse
+4. **Press Shift** to exit Revert mode without reverting

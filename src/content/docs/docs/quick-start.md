@@ -20,6 +20,7 @@ Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI d
 1. Open **Preferences → Link, Tempo & MIDI**
 2. Under **Control Surface**, select **param8**
 3. Set **Input** and **Output** to **param8**
+4. Under **MIDI**, activate **Remote In** and **Remote Out** for param8 
 
 The controller should light up and display parameter names once connected.
 
@@ -27,9 +28,10 @@ The controller should light up and display parameter names once connected.
 
 - **Turn an encoder** to change a parameter value
 - **Press Shift + Button 1–6** to switch presets
-- **Press Shift + Button 7** for Mixer (Global) mode
+- **Press Shift + Button 7** for Global mode
 - **Press Shift + Button 8** for Device mode
 - **Hold Latch** then turn encoders to queue changes — release to send them all at once
+- **Press Shift + Latch** to enter Revert mode
 
 ## 5. Web Editor
 
