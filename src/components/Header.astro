@@ -12,6 +12,14 @@ const links = [
 
 <ClientRouter />
 
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CHV091CXE4"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CHV091CXE4');
+</script>
+
 <header class="topbar" transition:persist>
   <div class="topbar-inner">
     <a href={`${base}/`} class="topbar-logo">
