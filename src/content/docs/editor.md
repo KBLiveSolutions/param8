@@ -4,7 +4,7 @@ description: Configure your param8 directly from the browser.
 ---
 
 <div class="app-page">
-  <iframe src="/editor-app/" title="param8 Online Editor" class="app-frame" allow="serial"></iframe>
+  <iframe src="https://kblivesolutions.github.io/param8-editor/" title="param8 Online Editor" class="app-frame" allow="serial"></iframe>
 </div>
 
 <style>
