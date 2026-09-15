@@ -6,10 +6,11 @@ export default defineConfig({
   site: 'https://param8.me',
   integrations: [
     starlight({
-      title: '',
+      title: 'param8',
       logo: { src: './src/assets/logo.svg' },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/KBLiveSolutions/param8' }],
       components: {
+        Head: './src/components/DocHead.astro',
         Header: './src/components/Header.astro',
         Sidebar: './src/components/Sidebar.astro',
         Footer: './src/components/Footer.astro',
