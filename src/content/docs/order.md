@@ -1,7 +1,6 @@
 ---
 title: Order param8
 description: Order your param8 controller.
-template: splash
 ---
 
 <div class="order-page">
@@ -14,8 +13,24 @@ template: splash
 </div>
 
 <style>
-  .order-page { min-height: calc(100vh - 3.5rem); display: grid; place-items: center; padding: 2rem; box-sizing: border-box; }
-  .order-card { width: min(520px, 100%); text-align: center; padding: 3rem 2rem; border: 1px solid #ddd; border-radius: 16px; background: white; box-sizing: border-box; }
+  .order-page {
+    min-height: calc(100vh - 4rem);
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .order-card {
+    width: min(520px, 100%);
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background: white;
+    box-sizing: border-box;
+  }
+
   .order-card h1 { margin: 0 0 .75rem; font-size: 2rem; }
   .order-card p { margin: .5rem 0; color: #666; }
   .price { font-size: 2rem; font-weight: 700; color: #111 !important; margin: 1.5rem 0 !important; }
