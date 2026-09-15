@@ -61,11 +61,25 @@ const links = [
   const analyticsId = 'G-CHV091CXE4';
   const consentKey = 'param8-analytics-consent';
 
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    wait_for_update: 500
+  });
+
   const loadAnalytics = () => {
     if (document.querySelector('script[data-param8-analytics]')) return;
 
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag() { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    });
     window.gtag('js', new Date());
     window.gtag('config', analyticsId);
 
