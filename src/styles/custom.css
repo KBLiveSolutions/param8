@@ -20,6 +20,8 @@
 
 /* Single frame around feature cards */
 .features-frame {
+	width: min(100%, 980px);
+	margin-inline: auto;
 	padding: 0.75rem;
 }
 .features-frame .card-grid {
@@ -77,6 +79,49 @@
 	padding: 0 !important;
 	border-bottom: none !important;
 	display: contents;
+}
+
+[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h2 {
+	display: block;
+	text-align: center;
+}
+
+[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h2 h2 {
+	width: 100%;
+	text-align: center;
+}
+
+[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h2 .sl-anchor-link {
+	display: none;
+}
+
+[data-has-hero] .home-specs {
+	text-align: center;
+}
+
+[data-has-hero] .home-specs table {
+	width: fit-content;
+	max-width: 100%;
+	margin-inline: auto;
+	text-align: left;
+}
+
+[data-has-hero] .home-pricing {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: min(100%, 720px);
+	margin-inline: auto;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+[data-has-hero] .home-pricing p {
+	width: fit-content;
+	max-width: 100%;
+	margin-inline: 0;
+	text-align: center;
+	overflow-wrap: anywhere;
 }
 
 /* Hide hero section on home page (used only to suppress default title) */
