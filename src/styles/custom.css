@@ -95,6 +95,28 @@
 	display: none;
 }
 
+[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h1 {
+	display: block;
+	width: 100%;
+	margin-block-start: 0.75rem !important;
+	margin-block-end: 3rem !important;
+	text-align: center;
+}
+
+[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h1 h1 {
+	width: 100%;
+	margin: 0 auto 3rem;
+	font-size: clamp(2.4rem, 6vw, 3.5rem);
+	font-weight: 600;
+	line-height: 1.05;
+	letter-spacing: 0;
+	text-align: center;
+}
+
+[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h1 .sl-anchor-link {
+	display: none;
+}
+
 [data-has-hero] .home-specs {
 	text-align: center;
 }
@@ -127,6 +149,10 @@
 /* Hide hero section on home page (used only to suppress default title) */
 [data-has-hero] .hero {
 	display: none;
+}
+
+[data-has-hero] .sl-markdown-content > h1 {
+	text-align: center;
 }
 
 /* Landing page hero */
@@ -171,11 +197,10 @@
 
 .hero-section .tagline {
 	font-size: 1.25rem;
-	color: var(--sl-color-gray-3);
+	color: #000;
 	max-width: 600px;
 	margin: 0 auto 2rem;
 }
-
 
 
 /* Feature grid */

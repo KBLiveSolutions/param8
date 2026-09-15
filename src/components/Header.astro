@@ -18,7 +18,7 @@ const links = [
     <a href={`${base}/`} class="topbar-logo">
       <img src={`${base}/logo.svg`} alt="param8" height="28" />
     </a>
-    <!-- <span class="topbar-tagline">Compact USB MIDI controller designed for Ableton Live.</span> -->
+    <span class="topbar-tagline">Control. See. Perform.</span>
     <nav class="topbar-nav" aria-label="Main">
       {links.map((l) => (
         <a href={l.href} class="topbar-link">{l.text}</a>
@@ -150,8 +150,10 @@ const links = [
   }
   .topbar-logo img { height: 28px; }
   .topbar-tagline {
-    color: #666;
-    font-size: 0.8rem;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 700;
+    transform: translateX(15rem);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
