@@ -1,13 +1,22 @@
 ---
 ---
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('.features-frame .card').forEach((c) => observer.observe(c));
+  let observer;
+
+  const observeCards = () => {
+    observer?.disconnect();
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.features-frame .card').forEach((card) => observer.observe(card));
+  };
+
+  document.addEventListener('astro:page-load', observeCards);
+  observeCards();
 </script>
