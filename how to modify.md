@@ -37,7 +37,7 @@ param8/
 2. Le format est du **Markdown standard** avec un frontmatter YAML en haut :
    ```md
    ---
-   title: Mixer Mode
+   title: Global Mode
    description: Comment utiliser le mode Mixer
    ---
 

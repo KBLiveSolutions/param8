@@ -28,7 +28,8 @@ export default defineConfig({
           label: 'User Guide',
           items: [
             { label: 'Presets', slug: 'docs/presets' },
-            { label: 'Mixer Mode', slug: 'docs/mixer-mode' },
+            { label: 'User Presets', slug: 'docs/user-presets' },
+            { label: 'Global Mode', slug: 'docs/mixer-mode' },
             { label: 'Device Mode', slug: 'docs/device-mode' },
             { label: 'Latch & Revert', slug: 'docs/latch-revert' },
           ],

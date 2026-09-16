@@ -25,6 +25,4 @@ A/B toggles the compare A/B function in Ableton Live, available only for Live's 
 
 The remote script uses Ableton's banking info to organize parameters into banks of 8. For instruments with incomplete bank definitions (like AAS Tension or Collision), empty slots are automatically filled with spare device parameters.
 
-## Parameter Watchers
 
-When a parameter has an active watcher from the remote script, its display shows the value received from Live rather than the raw encoder position. This keeps the display in sync with the actual parameter state.
