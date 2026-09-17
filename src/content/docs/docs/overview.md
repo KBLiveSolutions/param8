@@ -15,10 +15,10 @@ description: What is param8 and what can it do
 
 ## Software
 
-- **6 user presets** — fully configurable CC/Note assignments per encoder and button
-- **Global mode** (preset 7) — Master Volume, Cue Volume, Tempo, Scene select and launch, Track Volume/Pan, Currently Selected Parameter, and more
-- **Device mode** (preset 8) — Bank navigation for the selected Ableton device
-- **Latch mode** — silently change encoders and release them simultaneously
-- **Revert mode** — undo encoder movements
-- **Web editor** — configure everything from your browser via WebMIDI
+- [**6 user presets**](/docs/user-presets) — fully configurable CC/Note assignments per encoder and button
+- **[Global mode](/docs/mixer-mode)** (preset 7) — Master Volume, Cue Volume, Tempo, Scene select and launch, Track Volume/Pan, Currently Selected Parameter, and more
+- **[Device mode](/docs/device-mode)** (preset 8) — Bank navigation for the selected Ableton device
+- **[Latch mode](/docs/latch-revert/#latch-mode)** — silently change encoders and release them simultaneously
+- **[Revert mode](/docs/latch-revert/#revert-mode)** — undo encoder movements
+- **[Web editor](/docs/user-presets/#web-editor)** — configure everything from your browser via WebMIDI
 - **2 display layouts** — Dynamic or Compact

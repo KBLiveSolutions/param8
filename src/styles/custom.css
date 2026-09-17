@@ -117,6 +117,13 @@
 	display: none;
 }
 
+@media (max-width: 640px) {
+	[data-has-hero] .sl-markdown-content .sl-heading-wrapper.level-h1 h1 {
+		font-size: clamp(1.55rem, 8vw, 2rem);
+		white-space: nowrap;
+	}
+}
+
 [data-has-hero] .home-specs {
 	text-align: center;
 }

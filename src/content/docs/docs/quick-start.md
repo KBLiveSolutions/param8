@@ -9,7 +9,7 @@ Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI d
 
 ## 2. Install the Remote Script
 
-1. Download the [remote script](https://github.com/KBLiveSolutions/param8_remote_script/archive/refs/heads/main.zip)
+1. Download the [**Remote Script**](https://github.com/KBLiveSolutions/param8_remote_script/archive/refs/heads/main.zip) and unzip it
 2. Copy the `param8` folder to your Ableton Remote Scripts directory:
    - **macOS:** `~/Music/Ableton/User Library/Remote Scripts/`
    - **Windows:** `~\Documents\Ableton\User Library\Remote Scripts\`
@@ -20,7 +20,10 @@ Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI d
 1. Open **Preferences → Link, Tempo & MIDI**
 2. Under **Control Surface**, select **param8**
 3. Set **Input** and **Output** to **param8**
-4. Under **MIDI**, activate **Remote In** and **Remote Out** for param8 
+4. Under **Input Ports** and **Output Ports**, activate **Remote** for **param8** 
+
+
+![Ableton_Preferences](/images/Ableton_preferences.png)
 
 The controller should light up and display parameter names once connected.
 
