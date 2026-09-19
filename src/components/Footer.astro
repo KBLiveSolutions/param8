@@ -2,73 +2,9 @@
 import type { Props } from '@astrojs/starlight/props';
 ---
 
-<footer class="site-footer" transition:persist>
-  <form class="newsletter-form" action="https://formspree.io/f/xaenweaa" method="POST">
-    <input type="hidden" name="_subject" value="New param8 newsletter signup" />
-    <input type="hidden" name="form-type" value="newsletter" />
-    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true" />
-
-    <label for="newsletter-email" class="newsletter-label">Stay informed about param8</label>
-    <div class="newsletter-row">
-      <input
-        id="newsletter-email"
-        name="email"
-        type="email"
-        autocomplete="email"
-        placeholder="you@example.com"
-        required
-      />
-      <button type="submit">Subscribe</button>
-    </div>
-    <p class="newsletter-status" role="status" aria-live="polite"></p>
-  </form>
-
+<footer class="site-footer">
   <p>© 2026 <a href="https://www.kblivesolutions.com" target="_blank" rel="noopener">KB Live Solutions</a></p>
 </footer>
-
-<script>
-  function initNewsletterForm() {
-    const form = document.querySelector<HTMLFormElement>('.newsletter-form');
-    if (!form || form.dataset.bound === 'true') return;
-    form.dataset.bound = 'true';
-
-    const status = form.querySelector<HTMLParagraphElement>('.newsletter-status');
-    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      if (!status || !button) return;
-
-      button.disabled = true;
-      status.textContent = 'Sending…';
-      status.classList.remove('is-error');
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(form),
-        });
-
-        if (response.ok) {
-          status.textContent = "Thanks! You're on the list.";
-          form.reset();
-        } else {
-          status.textContent = 'Something went wrong. Please try again.';
-          status.classList.add('is-error');
-        }
-      } catch {
-        status.textContent = 'Network error. Please try again.';
-        status.classList.add('is-error');
-      } finally {
-        button.disabled = false;
-      }
-    });
-  }
-
-  initNewsletterForm();
-  document.addEventListener('astro:page-load', initNewsletterForm);
-</script>
 
 <style>
   .site-footer {
@@ -84,56 +20,5 @@ import type { Props } from '@astrojs/starlight/props';
   }
   .site-footer a:hover {
     text-decoration: underline;
-  }
-  .newsletter-form {
-    max-width: 28rem;
-    margin: 0 auto 1.5rem;
-  }
-  .newsletter-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--sl-color-gray-2);
-  }
-  .newsletter-row {
-    display: flex;
-    gap: 0.5rem;
-  }
-  .newsletter-row input {
-    flex: 1;
-    padding: 0.6rem 0.75rem;
-    border: 1px solid var(--sl-color-gray-5);
-    border-radius: 5px;
-    background: var(--sl-color-bg);
-    color: var(--sl-color-text);
-    font: inherit;
-    min-width: 0;
-  }
-  .newsletter-row input:focus {
-    outline: 2px solid var(--sl-color-text-accent);
-    outline-offset: 1px;
-  }
-  .newsletter-row button {
-    padding: 0.6rem 1.1rem;
-    border: 0;
-    border-radius: 5px;
-    background: var(--sl-color-text-accent);
-    color: var(--sl-color-black);
-    cursor: pointer;
-    font: inherit;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .newsletter-row button:hover { opacity: 0.85; }
-  .newsletter-row button:disabled { opacity: 0.6; cursor: default; }
-  .newsletter-status {
-    min-height: 1.2em;
-    margin: 0.5rem 0 0;
-    font-size: 0.8rem;
-  }
-  .newsletter-status.is-error { color: #e5484d; }
-  .honeypot { position: absolute; left: -9999px; }
-  @media (max-width: 480px) {
-    .newsletter-row { flex-direction: column; }
   }
 </style>
