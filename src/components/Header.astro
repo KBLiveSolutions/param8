@@ -296,14 +296,16 @@ const links = [
     position: relative;
   }
   .newsletter-form input[type="email"] {
-    width: 9rem;
+    width: 9.5rem;
     padding: 0.4rem 0.6rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #fff;
     color: #111;
     font: inherit;
-    font-size: 0.85rem;
+    /* Keep at 16px (1rem): mobile Safari/Chrome auto-zoom and scroll the
+       page on focus for inputs with a smaller computed font-size. */
+    font-size: 1rem;
   }
   .newsletter-form input[type="email"]:focus {
     outline: 2px solid var(--sl-color-text-accent);
