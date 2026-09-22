@@ -54,10 +54,12 @@ pilot_cbore_h = 1.0;       // counterbore depth
 
 // --- Mounting holes (board origin bottom-left, Y up) ---
 mount_holes = [
-    [3.50,  69.50],
-    [194.50, 69.50],
     [3.56,  3.50],
-    [194.50, 3.50]
+    [99, 3.50],
+    [194.50, 3.50],
+    [3.50,  69.50],
+    [99, 69.50],
+    [194.50, 69.50]
 ];
 
 // Board-to-enclosure offset
@@ -105,7 +107,7 @@ usbc_corner_r = 1.0;
 // Cable plug recess (thins the wall around the connector)
 usbc_plug_w       = 13.0;
 usbc_plug_h       = 7.0;
-usbc_wall_remain  = 0.8;      // remaining wall thickness at recess
+usbc_wall_remain  = 1;      // remaining wall thickness at recess
 
 // ============================================================
 // 2D Profiles
@@ -173,7 +175,7 @@ module display_window() {
 // ============================================================
 
 module usbc_notch_top() {
-    notch_h = pcb_thick + usbc_h + 0.5;
+    notch_h = pcb_thick + usbc_h + 30.5;
     notch_depth = wall_thick + 2;
     cx = brd_ox + usbc_x;
     cy = outer_h - wall_thick - 1;
@@ -286,7 +288,7 @@ module usbc_recess_bottom() {
     r = usbc_corner_r;
     translate([cx, outer_h - recess_depth, plate_thick])
         rotate([90, 0, 0])
-            translate([0, 0, -recess_depth])
+            translate([0, 1, -recess_depth])
                 linear_extrude(recess_depth + 0.1)
                     offset(r = r)
                         translate([-(usbc_plug_w/2 - r), -0.1])
@@ -508,7 +510,7 @@ translate([0, 0, explode]) top_plate();
 // ============================================================
 
 // Bottom (print as-is, lip facing up):
-//!bottom_plate();
+!bottom_plate();
 
 // Top (flip for printing, lid flat on bed):
  !rotate([180, 0, 0])

@@ -2,6 +2,7 @@
 import { ClientRouter } from 'astro:transitions';
 import discordIcon from '../assets/Discord-Symbol-Black.svg';
 import githubIcon from '../assets/github-icon.png';
+import instagramIcon from '../assets/Instagram_Icon.webp';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const links = [
@@ -33,7 +34,19 @@ const links = [
         title="Join the param8 Discord"
       >
         <img src={discordIcon.src} alt="" aria-hidden="true" />
-      </a>      <a
+      </a>      
+      <a
+        href="https://www.instagram.com/kblivesolutions"
+        class="discord-link"
+        aria-label="Connect on Instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Connect on Instagram"
+      >
+        <img src={instagramIcon.src} alt="" aria-hidden="true" />
+      </a>      
+
+      <a
         href="https://github.com/KBLiveSolutions/param8-firmware"
         class="discord-link"
         aria-label="Access the param8 GitHub repository"
@@ -73,6 +86,7 @@ const links = [
       <a href={l.href} class="topbar-mobile-link">{l.text}</a>
     ))}
     <a href="https://discord.gg/rX5sDXGU89" class="topbar-mobile-link" target="_blank" rel="noopener noreferrer">Discord</a>
+    <a href="https://www.instagram.com/kblivesolutions" class="topbar-mobile-link" target="_blank" rel="noopener noreferrer">Instagram</a>
     <a href="https://github.com/KBLiveSolutions/param8-firmware" class="topbar-mobile-link" target="_blank" rel="noopener noreferrer">GitHub</a>
     <form class="newsletter-form newsletter-form-mobile" action="https://formspree.io/f/xaenweaa" method="POST">
       <input type="hidden" name="_subject" value="New param8 newsletter signup" />
