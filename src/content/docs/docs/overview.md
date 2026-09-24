@@ -10,7 +10,7 @@ description: What is param8 and what can it do
 
 - **8 rotary encoders** with push-button — infinite rotation, no end stops
 - **2 tactile buttons with LEDs** — top : Shift, bottom : Latch
-- **2 OLED displays** — 256×64 pixels each, showing parameter names, values, and visual indicators
+- **2 OLED displays** — 3.12", 256×64 pixels each, showing parameter names, values, and visual indicators
 - **USB-C** — bus-powered, class-compliant USB MIDI
 
 ## Software
