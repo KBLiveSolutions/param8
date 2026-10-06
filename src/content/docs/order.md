@@ -6,11 +6,18 @@ description: Order your param8 controller.
 <div class="order-page">
   <div class="order-card">
     <h1>Order param8</h1>
-    <p>Pre-order your param8 controller.</p>
-    <p class="price">189 €</p>
-    <a class="order-button" href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00" target="_blank" rel="noopener">Continue to secure checkout</a>
+    <p>Order your param8 controller.</p>
+    <p class="price"></p>
+    <a class="order-button" href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00" target="_blank" rel="noopener">1 unit : 189 €</a>
+    <a class="order-button" href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00" target="_blank" rel="noopener">2 units : 359.10 €</a> (2nd unit 10% off)
+    <a class="order-button" href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00" target="_blank" rel="noopener">3 units : 510.30 €</a> (3rd unit 20% off)
+    <a class="order-button" href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00" target="_blank" rel="noopener">4 units : 642.60 €</a> (4th unit 30% off)
   </div>
 </div>
+
+
+
+<!-- **param8** is available for **189€** -->
 
 <style>
   .order-page {

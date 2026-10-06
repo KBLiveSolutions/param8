@@ -15,15 +15,15 @@ import Footer from '../components/Footer.astro';
     <main class="order-page">
       <div class="order-card">
         <h1>Order param8</h1>
-        <p>Pre-order your param8 controller.</p>
-    <p>Estimated shipping starts November 2026.</p>
-        <p class="price">189 €</p>
-        <a
-          class="order-button"
-          href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00"
-          target="_blank"
-          rel="noopener"
-        >Continue to secure checkout</a>
+        <p>Order your param8 controller.</p>
+    <p>Delivery time 2-3 weeks</p>
+    <p>Shipping 15 €</p>
+        <div class="order-options">
+          <a class="order-button" href="https://buy.stripe.com/bJe5kC2DBgwVfywaR9bjW00">1 unit: 189 €</a>
+          <a class="order-button" href="https://buy.stripe.com/8x2eVc3HF0xXdqo0cvbjW01">2 units: 359.10 € <span>(2nd unit 10% off)</span></a>
+          <a class="order-button" href="https://buy.stripe.com/00wbJ0a63dkJfyw0cvbjW02">3 units: 510.30 € <span>(3rd unit 20% off)</span></a>
+          <a class="order-button" href="https://buy.stripe.com/28EfZg2DBgwV4TSaR9bjW03">4 units: 642.60 € <span>(4th unit 30% off)</span></a>
+        </div>
       </div>
     </main>
 
@@ -69,21 +69,27 @@ import Footer from '../components/Footer.astro';
     color: #666;
   }
 
-  .price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #111 !important;
-    margin: 1.5rem 0 !important;
+  .order-options {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
   }
 
   .order-button {
-    display: inline-block;
+    display: block;
     padding: .8rem 1.4rem;
     border-radius: 8px;
     background: #111;
     color: white;
     text-decoration: none;
     font-weight: 600;
+  }
+
+  .order-button span {
+    display: block;
+    margin-top: .25rem;
+    font-size: .875rem;
+    font-weight: 400;
   }
 
   .order-button:hover {
