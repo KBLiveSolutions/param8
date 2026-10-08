@@ -4,7 +4,7 @@ description: Configuring and switching presets
 ---
 
 
-Presets 1 to 6 can be configured freely.
+Presets 1 to 24 can be configured freely.
 
 Each user preset stores independent settings for all 8 encoders and 8 buttons:
 
@@ -26,6 +26,19 @@ You can then edit the controls. All changes are applied immedialtely.
 You can store and import Presets using the Save and Load buttons.
 
 ## Renaming Controls from Ableton Live
+
+<div style="max-width: 720px; margin: 2rem auto;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe
+      src="https://www.youtube.com/embed/xKkKejnkSTs"
+      title="Renaming Controls demo video"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
 
 ### Automatic naming / values watcher
 
