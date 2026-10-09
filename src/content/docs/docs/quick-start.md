@@ -3,11 +3,7 @@ title: Quick Start
 description: Get param8 up and running with Ableton Live
 ---
 
-## 1. Connect the controller
-
-Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI device — no drivers needed.
-
-## 2. Install the Remote Script
+## 1. Install the Remote Script
 
 1. Download the [**Remote Script**](https://github.com/KBLiveSolutions/param8_remote_script/archive/refs/heads/main.zip) and unzip it
 2. Copy the `param8` folder to your Ableton Remote Scripts directory:
@@ -15,15 +11,20 @@ Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI d
    - **Windows:** `~\Documents\Ableton\User Library\Remote Scripts\`
 3. Restart Ableton Live
 
+## 2. Connect the controller
+
+Plug param8 into your computer via USB-C. It appears as a class-compliant MIDI device — no drivers needed.
+
 ## 3. Configure Ableton Live
 
 1. Open **Preferences → Link, Tempo & MIDI**
 2. Under **Control Surface**, select **param8**
-3. Set **Input** and **Output** to **param8**
-4. Under **Input Ports** and **Output Ports**, activate **Remote** for **param8** 
+3. Set **Input** and **Output** to **param8 (DAW)**
+4. Under **Input Ports** and **Output Ports**, activate **Remote** for **param8 (User)** 
 
 
-![Ableton_Preferences](/images/Ableton_preferences.png)
+
+![Ableton_Preferences](/images/AbletonPreferences2.png)
 
 The controller should light up and display parameter names once connected.
 
