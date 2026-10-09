@@ -37,8 +37,8 @@ import Footer from '../components/Footer.astro';
     margin: 0;
     min-height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #fff;
-    color: #111;
+    background: var(--sl-color-bg, #17181c);
+    color: var(--sl-color-text, #eceef2);
   }
 
   .order-page {
@@ -53,9 +53,9 @@ import Footer from '../components/Footer.astro';
     width: min(520px, 100%);
     text-align: center;
     padding: 3rem 2rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--sl-color-hairline, #353841);
     border-radius: 16px;
-    background: #fff;
+    background: var(--sl-color-bg-nav, #24272f);
     box-sizing: border-box;
   }
 
@@ -66,7 +66,7 @@ import Footer from '../components/Footer.astro';
 
   .order-card p {
     margin: .5rem 0;
-    color: #666;
+    color: var(--sl-color-gray-3, #888b96);
   }
 
   .order-options {
@@ -80,7 +80,7 @@ import Footer from '../components/Footer.astro';
     padding: .8rem 1.4rem;
     border-radius: 8px;
     background: #111;
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
   }
