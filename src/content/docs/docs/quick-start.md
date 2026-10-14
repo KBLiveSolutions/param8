@@ -5,7 +5,7 @@ description: Get param8 up and running with Ableton Live
 
 ## 1. Install the Remote Script
 
-1. Download the [**Remote Script**](https://github.com/KBLiveSolutions/param8_remote_script/archive/refs/heads/main.zip) and unzip it
+1. Download the [**Remote Script**](https://github.com/KBLiveSolutions/param8-remote-script/releases/latest/download/param8.zip) and unzip it
 2. Copy the `param8` folder to your Ableton Remote Scripts directory:
    - **macOS:** `~/Music/Ableton/User Library/Remote Scripts/`
    - **Windows:** `~\Documents\Ableton\User Library\Remote Scripts\`
