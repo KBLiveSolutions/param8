@@ -1,0 +1,189 @@
+---
+---
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop"></div>
+  <button class="lightbox-close" aria-label="Fermer">✕</button>
+  <button class="lightbox-prev" aria-label="Précédent">&#8249;</button>
+  <button class="lightbox-next" aria-label="Suivant">&#8250;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-text">
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox[aria-hidden="false"] {
+    display: flex;
+  }
+
+  .lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    cursor: pointer;
+  }
+
+  .lightbox-content {
+    position: relative;
+    z-index: 1;
+    width: min(90vw, 860px);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  }
+
+  #lightbox-img {
+    width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    display: block;
+    background: #111;
+  }
+
+  #lightbox-img[src=""] {
+    display: none;
+  }
+
+  .lightbox-text {
+    background: #1a1a1a;
+    padding: 1rem 1.5rem 1.25rem;
+    color: #fff;
+  }
+
+  .lightbox-text h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    padding: 0;
+  }
+
+  .lightbox-text p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 1.1rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .lightbox-prev { left: 1rem; }
+  .lightbox-next { right: 1rem; }
+
+  .lightbox-prev:hover,
+  .lightbox-next:hover,
+  .lightbox-close:hover {
+    background: rgba(255,255,255,0.15);
+  }
+</style>
+
+<script>
+  let currentIndex = 0;
+  let cards: Element[] = [];
+  let controller: AbortController | null = null;
+
+  const lightbox = document.getElementById('lightbox')!;
+  const img = document.getElementById('lightbox-img') as HTMLImageElement;
+  const title = document.getElementById('lightbox-title')!;
+  const desc = document.getElementById('lightbox-desc')!;
+
+  const show = (index: number) => {
+    currentIndex = (index + cards.length) % cards.length;
+    const card = cards[currentIndex];
+    const cardImg = card.querySelector('img');
+    const cardTitle = card.querySelector('h3');
+    const cardDesc = card.querySelector('p');
+
+    img.src = cardImg?.src ?? '';
+    img.alt = cardTitle?.textContent ?? '';
+    title.textContent = cardTitle?.textContent ?? '';
+    desc.textContent = cardDesc?.textContent ?? '';
+
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  const init = () => {
+    controller?.abort();
+    controller = new AbortController();
+    const { signal } = controller;
+
+    cards = Array.from(document.querySelectorAll('.feature-card'));
+    cards.forEach((card, i) => {
+      card.addEventListener('click', () => show(i), { signal });
+    });
+
+    lightbox.querySelector('.lightbox-close')!.addEventListener('click', close, { signal });
+    lightbox.querySelector('.lightbox-backdrop')!.addEventListener('click', close, { signal });
+    lightbox.querySelector('.lightbox-prev')!.addEventListener('click', () => show(currentIndex - 1), { signal });
+    lightbox.querySelector('.lightbox-next')!.addEventListener('click', () => show(currentIndex + 1), { signal });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.getAttribute('aria-hidden') === 'true') return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(currentIndex - 1);
+      if (e.key === 'ArrowRight') show(currentIndex + 1);
+    }, { signal });
+  };
+
+  document.addEventListener('astro:page-load', init);
+  init();
+</script>

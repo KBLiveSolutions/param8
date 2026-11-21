@@ -14,7 +14,7 @@
       });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll('.features-frame .card').forEach((card) => observer.observe(card));
+    document.querySelectorAll('.feature-card').forEach((card) => observer.observe(card));
   };
 
   document.addEventListener('astro:page-load', observeCards);
